@@ -58,4 +58,6 @@ jobs:
           npm ci
           npm install --save-dev @testing-library/jest-dom
       - name: Tests with jest
-        run: npm test
+        run: |
+          cd frontend
+          npm test
