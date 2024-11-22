@@ -9,7 +9,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = os.getenv('DEBUG').lower() == 'true'
+debug_value = os.getenv('DEBUG')
+DEBUG = debug_value.lower() == 'true' if debug_value else False 
 
 ALLOWED_HOSTS = [os.getenv('EXTERNAL_IP'), os.getenv('DOMAIN_NAME')]
 
